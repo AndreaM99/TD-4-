@@ -36,6 +36,7 @@ def afficher_formulaire():
     return """
         <form action="/formulaire2" method="post">
             Chiffre <input name="parametre2" type="text" />
+            <br>
             <input value="Ajouter" type="submit" />
         </form>
     """

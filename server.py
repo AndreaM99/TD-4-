@@ -95,3 +95,11 @@ def doubler_valeur():
     res = {"valeur": valeur, "double": double}
     #import ipdb; ipdb.set_trace() pour débuger, on le met le plus proche de l'erreur
     return template("{{valeur}} * 2 = <br/> {{double}}", valeur=valeur, double=double)
+
+
+@app.post('/doubler.json')
+def doubler_valeur_json():
+    data = request.json 
+    valeur = int(data.get("valeur"))
+    res = {'double': valeur*2}
+    return res

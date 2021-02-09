@@ -17,3 +17,9 @@ def test_double():
     res = form.submit()
     assert "64" in res.ubody
 # oour utiliser pytest -s . on dl pytest puis on met le code dans Shell.
+
+
+def test_double_json():
+    reponse = testapp.post_json("/doubler.json", {"valeur": 43} )
+
+    assert reponse.json["double"] == 86

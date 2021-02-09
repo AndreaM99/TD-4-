@@ -50,3 +50,25 @@ def traiter_formulaire():
     return str(valeur3)
   
 
+@app.get("/fonction")
+def afficher_formulaire():
+    return """
+        <form action="/formulaire2" method="post">
+            Chiffre <input name="parametre2" type="text" />
+            <br>
+            NomFonction <input name="fname" type="text" />
+            <br>
+            <input value="Ajouter" type="submit" />
+        </form>
+    """
+    
+@app.post("/fonction")
+def traiter_formulaire():
+    valeur = request.forms.get("parametre2")
+    print(valeur.split(";"))
+    valeur2 = valeur.split(";")
+    valeur3 = [float(i.replace(",",".")) for i in valeur2]   
+def fonction_formulaire():
+  value = request.forms.get("fname")
+  dic = {'Somme' : 'sum()'}
+  return value

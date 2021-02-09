@@ -15,5 +15,5 @@ def test_double():
     form = formulaire.form
     form["valeur"] = "32"
     res = form.submit()
-    assert "64" in res.ubody 
+    assert "64" in res.ubody
 # oour utiliser pytest -s . on dl pytest puis on met le code dans Shell.

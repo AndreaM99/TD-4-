@@ -93,4 +93,5 @@ def doubler_valeur():
     valeur = int(data.get("valeur"))
     double = valeur * 2
     res = {"valeur": valeur, "double": double}
+    #import ipdb; ipdb.set_trace() pour débuger, on le met le plus proche de l'erreur
     return template("{{valeur}} * 2 = <br/> {{double}}", valeur=valeur, double=double)

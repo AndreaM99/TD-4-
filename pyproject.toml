@@ -9,6 +9,7 @@ python = "^3.8"
 bottle = "^0.12.19"
 webtest = "^2.0.35"
 pytest = "^6.2.2"
+ipdb = "^0.13.4"
 
 [tool.poetry.dev-dependencies]
 

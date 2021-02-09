@@ -15,6 +15,7 @@ def greet(name='Stranger'):
 
  
 from bottle import request
+import numpy as np
  
 @app.get("/formulaire")
 def afficher_formulaire():
@@ -71,6 +72,6 @@ def traiter_formulaire():
 
 
     fname = request.forms.get("fname")
-    dic = {'Somme' : sum}
+    dic = {'Somme' : sum, 'Moyenne' : np.mean}
     print(dic)
-    return str(dic[fname](valeur3))
+    return str(valeur3), """<br>""", str(dic[fname](valeur3))
